@@ -1,0 +1,59 @@
+﻿@model EmployeeViewModel
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Employee Details</h1>
+
+<br/>
+
+<div class="row mb-3">
+    <div class=" col-12">
+            <div class="form-group">
+                <label asp-for="@Model.Name" class="col-form-label"></label>
+                <input asp-for="@Model.Name" class="form-control" readonly/>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.Age" class="col-form-label"></label>
+                <input asp-for="@Model.Age" class="form-control" readonly/>
+            </div>
+             <div class="form-group">
+                <label asp-for="@Model.Address" class="col-form-label"></label>
+                <input asp-for="@Model.Address" class="form-control" readonly/>
+            </div> 
+            <div class="form-group">
+                <label asp-for="@Model.Salary" class="col-form-label"></label>
+                <input asp-for="@Model.Salary" class="form-control" readonly/>
+            </div> 
+            <div class="form-group">
+                <label asp-for="@Model.Email" class="col-form-label"></label>
+                <input asp-for="@Model.Email" class="form-control" readonly/>
+            </div>
+             <div class="form-group">
+                <label asp-for="@Model.PhoneNumber" class="col-form-label"></label>
+                <input asp-for="@Model.PhoneNumber" class="form-control" readonly/>
+            </div>
+             <div class="form-group">
+                <label asp-for="@Model.Department" class="col-form-label"></label>
+                <input asp-for="@Model.Department.Name" class="form-control" readonly/>
+
+            </div>
+             <div class="form-group">
+                <label asp-for="@Model.HireDate" class="col-form-label"></label>
+                <input asp-for="@Model.HireDate" class="form-control" type="date" readonly/>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.Image" class="col-form-label"></label>
+                <input asp-for="@Model.Image" class="form-control" type="file" readonly/>
+            </div>
+             <div class="form-group form-check">
+                <input asp-for="@Model.IsActive" class="form-check-input" readonly type="checkbox"/>
+                <label class="form-check-label" asp-for="@Model.IsActive" ></label>
+            </div>
+            <br />
+            <a asp-action="Update" asp-route-id="@Model.Id" class="btn btn-primary">Edite</a>
+            <a asp-action="Index" class="btn btn-light">Back To List</a>
+
+    </div>
+
+</div>

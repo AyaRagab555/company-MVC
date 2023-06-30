@@ -1,0 +1,22 @@
+﻿@model Employee
+
+@{
+    ViewData["Title"] = "Create";
+   //var Departments = new SelectList(ViewBag.Departments, "Id", "Name");
+
+}
+
+<h1>Create</h1>
+
+
+<div class="row mb-3">
+    <div class=" col-6">
+        <form asp-action="Create" asp-controller="Employee" enctype="multipart/form-data">
+           <partial name="Partial/CreateEditViewPartial" model="@Model" />
+            <input type="submit" value="Add" class="btn btn-primary"/>
+            <a asp-action="Index" class="btn btn-light">Back To List</a>
+        </form>
+
+    </div>
+
+</div>
