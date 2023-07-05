@@ -4,16 +4,16 @@
     Layout = "~/Views/Shared/_AuthLayout.cshtml";
 }
 
-<h1>SignUp</h1>
+<h1 class="text-light my-3">SignUp</h1>
 
-<div class="container text-center ">
-    <div class="w-50 bg-light mx-auto m-3">
-        <form asp-action="SignUp" class="m-4">
-            <input class="form-control my-3" type="email" asp-for="Email" placeholder="Email" required/>
+<div class="text-center ">
+    <div class="w-50 mx-auto">
+        <form asp-action="SignUp" class="py-4 ">
+            <input class="form-control my-3 w-100 rounded bg-light border-0 " type="email" asp-for="Email" placeholder="Email" required />
             <span asp-validation-for="@Model.Email"></span>
-            <input class="form-control my-3" type="password" asp-for="Password" placeholder="Password" required/>
+            <input class="form-control my-3 w-100 rounded bg-light border-0 " type="password" asp-for="Password" placeholder="Password" required />
             <span asp-validation-for="@Model.Password"></span>
-            <input class="form-control my-3" type="password" asp-for="ConfirmPassword" placeholder="Confirm Password" required/>
+            <input class="form-control my-3 w-100 rounded bg-light border-0 " type="password" asp-for="ConfirmPassword" placeholder="Confirm Password" required />
             <div class="">
                 <label>
                     <input type="checkbox" asp-for="IsAgree" required />
@@ -21,7 +21,7 @@
                 </label>
 
             </div>        
-            <input type="submit" value="SIGNUP"/>
+            <input class="form-control my-3 rounded-pill bg-light border-0 " type="submit" value="SIGNUP" />
         </form>
         <p>Don't have an Account ? <a asp-action="SignIn"> Login Now!</a></p>
     </div>

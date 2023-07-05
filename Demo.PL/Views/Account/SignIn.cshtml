@@ -4,14 +4,15 @@
     Layout = "~/Views/Shared/_AuthLayout.cshtml";
 }
 
-<h1>SignIn</h1>
+<h1 class="text-light">SignIn</h1>
+
 
 <div class="container text-center">
-    <div class="w-50 bg-light mx-auto m-3">
-        <form asp-action="SignIn" class="m-4">
-            <input class="form-control my-3" type="email" asp-for="Email" placeholder="Email" required/>
+    <div class="w-50 mx-auto ">
+        <form asp-action="SignIn" class="py-4">
+            <input class="form-control my-3 w-100 rounded bg-light border-0 " type="email" asp-for="Email" placeholder="Email" required />
             <span asp-validation-for="@Model.Email"></span>
-            <input class="form-control my-3" type="password" asp-for="Password" placeholder="Password" required/>
+            <input class="form-control my-3 w-100 rounded bg-light border-0 " type="password" asp-for="Password" placeholder="Password" required />
             <span asp-validation-for="@Model.Password"></span>
             <div >
                 <label>
@@ -20,7 +21,7 @@
                 </label>
 
             </div>        
-            <input type="submit" value="SIGNIN"/>
+            <input class="form-control my-3 rounded-pill bg-light border-0 " type="submit" value="SIGNIN" />
         </form>
         <div class="row justify-content-between">
             <div class="col-6">

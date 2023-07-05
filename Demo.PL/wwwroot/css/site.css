@@ -69,3 +69,11 @@ body {
   white-space: nowrap;
   line-height: 60px; /* Vertically center the text there */
 }
+
+.bgCover{
+    background-image: url("../imgs/istockphoto-1285588443-612x612.jpg");
+    background-attachment : fixed;
+    background-size: contain;
+    background-position : center center;
+    width: 100%;
+}
